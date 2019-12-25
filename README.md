@@ -33,7 +33,7 @@ The complete analysis of PDX data for Ewing Sarcoma, incuding the generation of 
 
 Here is complete list of options for the script:
 
-Commands:
+#### Commands:
 
 --doQC  - perform basic Quality Check (removal of low/large number of reads cells, removal of cells with high mitochondrian read fraction)
 
@@ -43,7 +43,7 @@ Commands:
 
 --doModuleScores - compute the module score table based on the definition of the modules
 
-Parameters, paths:
+#### Parameters, paths:
 
 --dataFolder [complete_path_for_the_data_folder]  
 
@@ -53,7 +53,7 @@ Parameters, paths:
 
 --matlabCodeFolder ./code/  
 
-Parameters of the analysis
+#### Parameters of the analysis
 
 --kNeighbours 10  - number of neighbours used to construct the kNN graph
 
@@ -65,7 +65,7 @@ Parameters of the analysis
 
 Analysis of all the PDX datasets can be run through 1) unzipping the data file in the data folder and 2) launching the corresponding .bat file.
 
-Produced files:
+#### Produced files:
 
 [prefix] is the name of the file without .txt extension (e.g., 'pdx352')
 
