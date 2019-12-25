@@ -1,0 +1,1 @@
+java -cp code/getools.jar ESPDX --dataFolder C:\Datas\MOSAIC\expression\chromium_data\final\data\  --prefix pdx1058 --doQC_ --doAnalysis_ --doModuleScores --doSPRING_ --matlabCodeFolder C:\Datas\MOSAIC\expression\chromium_data\final\code\  --kNeighbours 5 --mit_perc_score 0.1  --minReadCounts 6000  --maxReadCounts 40000  --signatureDefinitionFile ./code/ics_and_signatures.gmt

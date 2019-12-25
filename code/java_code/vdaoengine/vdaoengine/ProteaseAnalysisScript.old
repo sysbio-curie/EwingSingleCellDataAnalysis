@@ -1,0 +1,74 @@
+package vdaoengine;
+
+import vdaoengine.data.*;
+import vdaoengine.utils.*;
+import vdaoengine.data.io.*;
+
+import java.io.*;
+import java.util.*;
+
+public class ProteaseAnalysisScript {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		try{
+			
+			String prefix = "c:/datas/ewing/protease/towork/";
+			Vector<String> files = new Vector<String>();
+			files.add("CHIPCHIP.txt");
+			files.add("CHIPSEQ.txt");
+			files.add("FITSCORE.txt");
+			files.add("MOTIF.txt");
+			files.add("PROTEASE.txt");
+			files.add("EW_VS_NORM.txt");
+			files.add("EWCL_VS_MSC.txt");
+			files.add("EWCL_VS_NORM.txt");
+			files.add("EWTM_VS_MSC.txt");
+			files.add("EWTM_VS_NORM.txt");
+			files.add("EWXN.txt");
+			
+			/*Vector<String> fullListIds = new Vector<String>();
+			
+			for(int i=0;i<files.size();i++){
+				System.out.println(files.get(i));
+				VDataTable vt = vdaoengine.data.io.VDatReadWrite.LoadFromSimpleDatFile(prefix+files.get(i), true, "\t");
+				int k=vt.fieldNumByName("ENTREZ");
+				for(int j=0;j<vt.rowCount;j++)
+					if(fullListIds.indexOf(vt.stringTable[j][k])<0)
+							fullListIds.add(vt.stringTable[j][k]);
+			}
+			
+			Collections.sort(fullListIds);
+			
+			FileWriter fw = new FileWriter(prefix+"allids.txt");
+			for(int i=0;i<fullListIds.size();i++)
+				fw.write(fullListIds.get(i)+"\n");*/
+			
+			/*VDataTable vti = VDatReadWrite.LoadFromSimpleDatFile(prefix+"IDS.txt", true, "\t");
+			
+			for(int i=0;i<files.size();i++){
+				System.out.println(files.get(i));
+				VDataTable vt = vdaoengine.data.io.VDatReadWrite.LoadFromSimpleDatFile(prefix+files.get(i), true, "\t");
+				vt.addNewColumn(files.get(i).substring(0,files.get(i).length()-4), "", "", vt.NUMERICAL, "1");
+				vti = VSimpleProcedures.MergeTables(vti, "ENTREZ", vt, "ENTREZ", "0");
+			}
+			
+			VDataTable annot = VDatReadWrite.LoadFromSimpleDatFile("c:/datas/annot3.txt", true, "\t");
+			vti = VSimpleProcedures.MergeTables(vti, "Probeset", annot, "Probe", "0");
+			
+			VDatReadWrite.saveToSimpleDatFile(vti, prefix+"Total.xls");*/
+			
+			VDataTable vt = VDatReadWrite.LoadFromSimpleDatFile(prefix+"proteasome.txt", true, "\t");
+			VDatReadWrite.saveToVDatFile(vt, prefix+"proteasome.dat");
+			
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}
+

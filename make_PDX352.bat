@@ -1,0 +1,1 @@
+java -cp code/getools.jar ESPDX --dataFolder C:/TEMP/test_MOSAIC_pipeline/data/  --prefix pdx352 --doQC --doAnalysis --doSPRING --doModuleScores --matlabCodeFolder ./code/  --kNeighbours 10  --mit_perc_score 0.07  --minReadCounts 6000  --maxReadCounts 40000  --signatureDefinitionFile C:/TEMP/test_MOSAIC_pipeline/code/ics_and_signatures.gmt
