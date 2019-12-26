@@ -14,7 +14,7 @@ The calculations uses the getools.jar file which should be downloaded from ''.
 
 ### Raw data
 
-Raw count data for Patient Derived Xenografts of Ewing sarcoma tumors can be found in the 'data' folder, as tab-delimited files.
+Raw count data for Patient Derived Xenografts of Ewing sarcoma tumors can be found in the 'data' folder, as tab-delimited files (after downloading them using instructions from the 'data/readme.txt' file).
 
 Raw cound and logged data for the inducible cell line can be found in the 'inducible_cell_line.zip' archive.
 
@@ -92,6 +92,22 @@ Analysis of all the PDX datasets can be run through 1) unzipping the data file i
 [prefix]_nuf2k.txt.moduleAverages  - computation of module scores using 2000 most variable genes
 
 [prefix]_nufp.txt  - '*_nuf.txt' file after application of read count pooling in neighbouring cells
+
+[prefix]_nufp2k.txt  - '*_nufp.txt' file after selecting 2000 most variable genes
+
+[prefix]_nufp10k.txt  - '*_nufp.txt' file after selecting 10000 most variable genes
+
+[prefix]_nufp_IC10+.txt - '*_nufp.txt' file after selecting IC-EwS (IC10+) genes
+
+[prefix]_nufp_IC10+_T.txt - '*_nufp_IC10+.txt' file with transposed dataframe
+
+[prefix]_nufp_IC10+_T.txt_clusters2 - '*_nufp_IC10+_T.txt' dataset clustered in two clusters using k-means (k=2)
+
+[prefix]_nufp2k.txt.moduleAverages  - computation of module scores using 2000 most variable genes after pooling
+
+[prefix]_nufp2k_modulescores.txt - same content as '*_nufp2k.txt.moduleAverages' formatted for loading into SPRING
+
+SPRING_datasets/[prefix]_nufp - folder with files generated for SPRING interface (v1)
 
 
 
